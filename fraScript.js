@@ -868,12 +868,12 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	if (new gadgets.Prefs().getString("autoGo")) { autoPlay = parseInt(new gadgets.Prefs().getString("autoGo")); };
-	if (new gadgets.Prefs().getString("displayTime")) { autoTime = parseInt(new gadgets.Prefs().getString("displayTime")); };
-	if (new gadgets.Prefs().getString("speed")) {	textSpeed = parseInt(new gadgets.Prefs().getString("speed")); };
-	if (new gadgets.Prefs().getString("selectName")) { name = new gadgets.Prefs().getString("selectName"); };
-	if (new gadgets.Prefs().getString("selectJob")) {	jobCode = parseInt(new gadgets.Prefs().getString("selectJob")); };
-	if (new gadgets.Prefs().getString("selectClass")) {	classCode = parseInt(new gadgets.Prefs().getString("selectClass")); };
+	autoPlay = parseInt(getURLParameter("autoGo"));
+	autoTime = parseInt(getURLParameter("displayTime"));
+	textSpeed = parseInt(getURLParameter("speed"));
+	name = getURLParameter("selectName");
+	jobCode = parseInt(getURLParameter("selectJob"));
+	classCode = getURLParameter("selectClass");
 		//주인공 모험가 이름, 일러스트 중복 설정 (오류 방지)
 		cha[0][1] = name;
 		cha[0][2] = "a" + (jobCode).toString();
