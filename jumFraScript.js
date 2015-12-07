@@ -301,7 +301,7 @@ function shuffle() {//섞어주기
 //url 패러미터 분석 (출처 : http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513)
 function getURLParameter(name, defaultKey) {
 	var temp = decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
-	if (if temp != null) {
+	if (temp != null) {
 		return temp;
 	} else {
 		return defaultKey
