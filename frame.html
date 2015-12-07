@@ -1,0 +1,113 @@
+﻿<Module>
+<ModulePrefs title="__MSG_title__" description="__MSG_description__" author="Google" author_email="googlemodules+image_slideshow+201205281@google.com" author_affiliation="Google Inc." author_location="Seoul, Korea" screenshot="http://www.gstatic.com/ig/modules/image_slideshow/image_slideshow_content/ALL_ALL.cache.png" thumbnail="http://www.gstatic.com/ig/modules/image_slideshow/image_slideshow_content/ALL_ALL-thm.cache.png">
+</ModulePrefs>
+<UserPref name="autoGo" display_name="none" required="false" default_value="1"/>
+<UserPref name="displayTime" display_name="none" required="false" default_value="1"/>
+<UserPref name="speed" display_name="none" required="false" default_value="30"/>
+<UserPref name="selectName" display_name="none" required="false" default_value="모험가"/>
+<UserPref name="selectJob" display_name="none" required="false" default_value="9"/>
+<UserPref name="selectClass" display_name="none" required="false" default_value="4"/>
+<UserPref name="selectFile" display_name="none" required="false" default_value=""/>
+<Content type="html">
+<![CDATA[
+	<!DOCTYPE html>
+	
+	<link rel="stylesheet" type="text/css" href="https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8/fraStyle.css">
+	
+	
+	
+	
+
+	<div id="wrapper">
+	
+		<div id="cover" class="" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+		</div>
+
+
+		<div id="popup">
+		</div>
+
+			<!--내비게이션 버튼들-->
+			<div id="toBeforeCover" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+			</div>
+			<div id="start" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+				로딩 대기 중...
+			</div>
+			<div id="return" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+			</div>
+			<div id="auto" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+
+			</div>
+			<div id="play" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+
+			</div>
+			<div id="toBefore" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+				뒤로
+			</div>
+			<div id="title" onmousedown="event.preventDefault ? event.preventDefault() : eㅇvent.returnValue = false" >
+			</div>
+			<div id="now" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+			</div>
+			<!--내비게이션 버튼들-->
+			
+			<!--선택지 버튼들 : 분기점 전용-->
+			<div id="choose1" class="choose" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+				선택지 1
+			</div>
+			<div id="choose2" class="choose" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+				선택지 2
+			</div>
+			<div id="choose3" class="choose" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+				선택지 3
+			</div>
+			<div id="choose4" class="choose" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
+				선택지 4
+			</div>
+			<!--선택지 버튼들 : 분기점 전용-->
+			
+
+		<div id="main">
+		
+			<div id="changeBack" class="" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+				<img id="changeSprite" /> <!--전환 배경 캐릭터-->
+			</div>
+		
+			<img id="sprite" /> <!--배경 캐릭터-->
+
+			<div id="top">
+				<div id="topPic"></div>
+				<div id="topName"></div>
+				<div id="topText">
+				</div>
+			</div>
+			
+			<div id="center">
+			</div>
+			
+			<div id="bottom">
+				<div id="bottomPic">
+				</div>
+				<div id="bottomName">
+				</div>
+				<div id="bottomText">
+				</div>
+			</div>
+			
+			<div id="toNext">
+			</div>
+		</div>
+		
+		<div id="footer" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
+		</div>
+	</div>
+
+	<div id="imagePreloader"></div>
+	
+	<script type="text/javascript" src="https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8/fraCharacter.js"></script>
+	<script type="text/javascript" src="https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8/fraCoop.js"></script>
+	<script type="text/javascript" src="https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8/fraScript.js"></script>
+
+	
+]]>
+</Content>
+</Module>
