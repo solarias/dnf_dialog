@@ -286,8 +286,7 @@ function getAnswer() {
 function shuffle() {//섞어주기
 	getAnswer(); //랜덤값 다시 받기
 
-	loadJs("https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8\
-		/91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {return;});
+	loadJs("./91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {return;});
 }
 
 
@@ -1197,8 +1196,7 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		if (eventName == "내캐릭터") {//"내 캐릭터 추천"은 classCode에 맞춰 불러옴
 			tempFile = "9101_" + classCode;
 		}
-		loadJs("https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8\
-		/91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {
+		loadJs("./91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {
 			//※ 대사집 불러오기 전까진 다른 작업 수행 금지
 			
 			
@@ -1360,8 +1358,7 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		
 	} else {
 		alert("※ 오류 : 불러올 대사집이 지정되지 않았습니다.\
-		\n대사 위치 : https://googledrive.com/host/0B6rCL-wkBAtKflNscVdlNnZGMG16UHdXSnRnd0NMYXkzamYyM0MyT2cyd3MteTNITWZsOW8\
-		/91/1/" +tempFile + ".js");
+		\n대사 위치 : ./91/1/" +tempFile + ".js");
 		return false;
 	}
 };
