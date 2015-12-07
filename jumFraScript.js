@@ -1160,16 +1160,16 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	autoPlay = parseInt(getURLParameter("autoGo"));
-	autoTime = parseInt(getURLParameter("displayTime"));
-	textSpeed = parseInt(getURLParameter("speed"));
-	name = getURLParameter("selectName");
-	jobCode = parseInt(getURLParameter("selectJob"));
-	classCode = getURLParameter("selectClass");
-	myImage = getURLParameter("selectURL");
-	server = parseInt(getURLParameter("selectServer"));
-	targeting = parseInt(getURLParameter("selectTarget"));
-	tempFile = getURLParameter("selectFile");
+	autoPlay = parseInt(getURLParameter("autoGo","1"));
+	autoTime = parseInt(getURLParameter("displayTime","1"));
+	textSpeed = parseInt(getURLParameter("speed","30"));
+	name = getURLParameter("selectName","모험가");
+	jobCode = parseInt(getURLParameter("selectJob","9"));
+	classCode = getURLParameter("selectClass","4");
+	myImage = getURLParameter("selectURL","0");
+	server = parseInt(getURLParameter("selectServer",""));
+	targeting = parseInt(getURLParameter("selectTarget","0"));
+	tempFile = getURLParameter("selectFile","");
 		//1. 특수 상황 대비
 		if (tempFile == "9101_내캐릭터") {//1.1. "내 캐릭터" 전용
 			eventName = "내캐릭터";
