@@ -304,7 +304,7 @@ function getURLParameter(name, defaultKey) {
 	if (temp != null) {
 		return temp;
 	} else {
-		return defaultKey
+		return defaultKey;
 	}
 }
 
@@ -415,7 +415,7 @@ function getPage(num) {
 	
 	
 		//캐릭터, 텍스트를 비교하여 등장하는 캐릭터만 로드 (자기캐릭터는 빼고)
-		for (y=0;y<text.length;y++){
+		for (y=0;y<text.length;y++) {
 			//캐릭터, 텍스트를 비교하여 등장하는 캐릭터만 로드
 			if (num != 0 && cha[num][0] != "" && cha[num][0] == text[y][0]) { //(num = 0)<-모험가
 				document.getElementById("main").innerHTML += "\
@@ -1166,8 +1166,8 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	name = getURLParameter("selectName","모험가");
 	jobCode = parseInt(getURLParameter("selectJob","9"));
 	classCode = getURLParameter("selectClass","4");
-	myImage = getURLParameter("selectURL","0");
-	server = parseInt(getURLParameter("selectServer",""));
+	server = parseInt(getURLParameter("selectServer","0"));
+	myImage = getURLParameter("selectURL","");
 	targeting = parseInt(getURLParameter("selectTarget","0"));
 	tempFile = getURLParameter("selectFile","");
 		//1. 특수 상황 대비
