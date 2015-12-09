@@ -1159,9 +1159,9 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
+	alert(localStorage);
 	var tempOb = localStorage["dnf_Jum"];
 	tempOb = JSON.parse(tempOb);
-	alert(tempOb);
 	autoPlay = parseInt(parseLocal(tempOb["autoGo"],"1"));
 	autoTime = parseInt(parseLocal(tempOb["displayTime"],"1"));
 	textSpeed = parseInt(parseLocal(tempOb["speed"],"30"));
