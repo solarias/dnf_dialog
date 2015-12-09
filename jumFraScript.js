@@ -299,9 +299,9 @@ function shuffle() {//섞어주기
 		//====================================================================================================================
 		
 //url 패러미터 분석 (출처 : http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513)
-function getURLParameter(name, defaultKey) {
-	var temp = decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
-	if (temp != null) {
+function parseLocal(name, defaultKey) {
+	var temp = JSON.parse(localStorage["dnf_Jum"]);
+	if (temp[name] != "") {
 		return temp;
 	} else {
 		return defaultKey;
@@ -1160,16 +1160,30 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	autoPlay = parseInt(getURLParameter("autoGo","1"));
-	autoTime = parseInt(getURLParameter("displayTime","1"));
-	textSpeed = parseInt(getURLParameter("speed","30"));
-	name = getURLParameter("selectName","모험가");
-	jobCode = parseInt(getURLParameter("selectJob","9"));
-	classCode = getURLParameter("selectClass","4");
-	server = parseInt(getURLParameter("selectServer","0"));
-	myImage = getURLParameter("selectURL","");
-	targeting = parseInt(getURLParameter("selectTarget","0"));
-	tempFile = getURLParameter("selectFile","");
+	autoPlay = parseInt(parseLocal("autoGo","1"));
+	autoTime = parseInt(parseLocal("displayTime","1"));
+	textSpeed = parseInt(parseLocal("speed","30"));
+	name = parseLocal("selectName","모험가");
+	jobCode = parseInt(parseLocal("selectJob","9"));
+	classCode = parseLocal("selectClass","4");
+	server = parseInt(parseLocal("selectServer","0"));
+	myImage = parseLocal("selectURL","");
+	targeting = parseInt(parseLocal("selectTarget","0"));
+	tempFile = parseLocal("selectFile","");
+	//외부 패러미터 초기화
+	var inputObject = {
+		autoGo : "",
+		displayTime : "",
+		speed : "",
+		selectName : "",
+		selectJob : "",
+		selectClass : "",
+		selectURL : "",
+		selectServer : "",
+		selectTarget : "",
+		selectFile : "",
+	};
+	localStorage["dnf_Jum"] = JSON.stringify(inputObject);
 		//1. 특수 상황 대비
 		if (tempFile == "9101_내캐릭터") {//1.1. "내 캐릭터" 전용
 			eventName = "내캐릭터";
