@@ -300,8 +300,7 @@ function shuffle() {//섞어주기
 		
 //url 패러미터 분석 (출처 : http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513)
 function parseLocal(name, defaultKey) {
-	var temp = JSON.parse(localStorage["dnf_Jum"]);
-	if (temp[name] != "") {
+	if (name != "") {
 		return temp;
 	} else {
 		return defaultKey;
@@ -1160,16 +1159,17 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	autoPlay = parseInt(parseLocal("autoGo","1"));
-	autoTime = parseInt(parseLocal("displayTime","1"));
-	textSpeed = parseInt(parseLocal("speed","30"));
-	name = parseLocal("selectName","모험가");
-	jobCode = parseInt(parseLocal("selectJob","9"));
-	classCode = parseLocal("selectClass","4");
-	server = parseInt(parseLocal("selectServer","0"));
-	myImage = parseLocal("selectURL","");
-	targeting = parseInt(parseLocal("selectTarget","0"));
-	tempFile = parseLocal("selectFile","");
+	var tempOb = JSON.parse(localStorage["dnf_Jum"]);
+	autoPlay = parseInt(parseLocal(tempOb["autoGo"],"1"));
+	autoTime = parseInt(parseLocal(tempOb["displayTime"],"1"));
+	textSpeed = parseInt(parseLocal(tempOb["speed"],"30"));
+	name = parseLocal(tempOb["selectName"],"모험가");
+	jobCode = parseInt(parseLocal(tempOb["selectJob"],"9"));
+	classCode = parseLocal(tempOb["selectClass"],"4");
+	server = parseInt(parseLocal(tempOb["selectServer"],"0"));
+	myImage = parseLocal(tempOb["selectURL"],"");
+	targeting = parseInt(parseLocal(tempOb["selectTarget"],"0"));
+	tempFile = parseLocal(tempOb["selectFile"],"");
 	//외부 패러미터 초기화
 	var inputObject = {
 		autoGo : "",
