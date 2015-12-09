@@ -299,8 +299,9 @@ function shuffle() {//섞어주기
 		//====================================================================================================================
 		
 //url 패러미터 분석 (출처 : http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513)
-function parseLocal(name, defaultKey) {
-	if (name != "") {
+function getURLParameter(name, defaultKey) {
+	var temp = decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+	if (temp != null) {
 		return temp;
 	} else {
 		return defaultKey;
@@ -1159,19 +1160,16 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	alert(localStorage);
-	var tempOb = localStorage["dnf_Jum"];
-	tempOb = JSON.parse(tempOb);
-	autoPlay = parseInt(parseLocal(tempOb["autoGo"],"1"));
-	autoTime = parseInt(parseLocal(tempOb["displayTime"],"1"));
-	textSpeed = parseInt(parseLocal(tempOb["speed"],"30"));
-	name = parseLocal(tempOb["selectName"],"모험가");
-	jobCode = parseInt(parseLocal(tempOb["selectJob"],"9"));
-	classCode = parseLocal(tempOb["selectClass"],"4");
-	server = parseInt(parseLocal(tempOb["selectServer"],"0"));
-	myImage = parseLocal(tempOb["selectURL"],"");
-	targeting = parseInt(parseLocal(tempOb["selectTarget"],"0"));
-	tempFile = parseLocal(tempOb["selectFile"],"");
+	autoPlay = parseInt(getURLParameter("autoGo","1"));
+	autoTime = parseInt(getURLParameter("displayTime","1"));
+	textSpeed = parseInt(getURLParameter("speed","30"));
+	name = getURLParameter("selectName","모험가");
+	jobCode = parseInt(getURLParameter("selectJob","9"));
+	classCode = getURLParameter("selectClass","4");
+	server = parseInt(getURLParameter("selectServer","0"));
+	myImage = getURLParameter("selectURL","");
+	targeting = parseInt(getURLParameter("selectTarget","0"));
+	tempFile = getURLParameter("selectFile","");
 		//1. 특수 상황 대비
 		if (tempFile == "9101_내캐릭터") {//1.1. "내 캐릭터" 전용
 			eventName = "내캐릭터";
