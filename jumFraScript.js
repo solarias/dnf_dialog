@@ -1181,7 +1181,7 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		selectURL : "",
 		selectServer : "",
 		selectTarget : "",
-		selectFile : "",
+		selectFile : ""
 	};
 	localStorage["dnf_Jum"] = JSON.stringify(inputObject);
 		//1. 특수 상황 대비
