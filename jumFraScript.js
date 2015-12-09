@@ -1159,7 +1159,9 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
-	var tempOb = JSON.parse(localStorage["dnf_Jum"]);
+	var tempOb = localStorage["dnf_Jum"];
+	tempOb = JSON.parse(tempOb);
+	alert(tempOb);
 	autoPlay = parseInt(parseLocal(tempOb["autoGo"],"1"));
 	autoTime = parseInt(parseLocal(tempOb["displayTime"],"1"));
 	textSpeed = parseInt(parseLocal(tempOb["speed"],"30"));
@@ -1170,20 +1172,6 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 	myImage = parseLocal(tempOb["selectURL"],"");
 	targeting = parseInt(parseLocal(tempOb["selectTarget"],"0"));
 	tempFile = parseLocal(tempOb["selectFile"],"");
-	//외부 패러미터 초기화
-	var inputObject = {
-		autoGo : "",
-		displayTime : "",
-		speed : "",
-		selectName : "",
-		selectJob : "",
-		selectClass : "",
-		selectURL : "",
-		selectServer : "",
-		selectTarget : "",
-		selectFile : ""
-	};
-	localStorage["dnf_Jum"] = JSON.stringify(inputObject);
 		//1. 특수 상황 대비
 		if (tempFile == "9101_내캐릭터") {//1.1. "내 캐릭터" 전용
 			eventName = "내캐릭터";
