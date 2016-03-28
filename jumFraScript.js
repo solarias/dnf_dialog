@@ -45,14 +45,14 @@ var eventName = ""; //특정'상황' 저장용
 		//====================================================================================================================
 		// ※ 변수 준비
 		//====================================================================================================================
-		
+
 //점쟁이 전용 외부인수
 var server = 0;//서버 리스트 선택자
 var targeting = 0;//타겟 리스트 선택자
 //서버 관련
 
 var serverName = [//서버 이름들
-	"카인","디레지에","시로코","프레이","카시야스","힐더","안톤","바칼",,"레이드"
+	"카인","디레지에","시로코","프레이","카시야스","힐더","안톤","바칼","레이드"
 ];
 
 		//====================================================================================================================
@@ -61,30 +61,29 @@ var serverName = [//서버 이름들
 
 //추천 - 채널
 var A_channelList = [//서버별 채널 리스트
-	[								
-	"통합 채널 / 실버크라운 CH 1","통합 채널 / 실버크라운 CH 2","통합 채널 / 실버크라운 CH 3","통합 채널 / 실버크라운 CH 4","통합 채널 / 실버크라운 CH 5","통합 채널 / 실버크라운 CH 6","통합 채널 / 실버크라운 CH 7","통합 채널 / 실버크라운 CH 8","통합 채널 / 실버크라운 CH 9","통합 채널 / 실버크라운 CH 10","통합 채널 / 실버크라운 CH 11","통합 채널 / 실버크라운 CH 12","통합 채널 / 실버크라운 CH 13","통합 채널 / 실버크라운 CH 14","통합 채널 / 실버크라운 CH 15","통합 채널 / 실버크라운 CH 16","통합 채널 / 실버크라운 CH 17","통합 채널 / 실버크라운 CH 18","통합 채널 / 실버크라운 CH 19","통합 채널 / 실버크라운 CH 20",
-	"통합 채널 / 멜트다운 CH 1","통합 채널 / 멜트다운 CH 2","통합 채널 / 멜트다운 CH 3","통합 채널 / 멜트다운 CH 4","통합 채널 / 멜트다운 CH 5","통합 채널 / 멜트다운 CH 6","통합 채널 / 멜트다운 CH 7","통합 채널 / 멜트다운 CH 8","통합 채널 / 멜트다운 CH 9","통합 채널 / 멜트다운 CH 10","통합 채널 / 멜트다운 CH 11","통합 채널 / 멜트다운 CH 12","통합 채널 / 멜트다운 CH 13","통합 채널 / 멜트다운 CH 14","통합 채널 / 멜트다운 CH 15","통합 채널 / 멜트다운 CH 16","통합 채널 / 멜트다운 CH 17","통합 채널 / 멜트다운 CH 18","통합 채널 / 멜트다운 CH 19","통합 채널 / 멜트다운 CH 20",
-	"통합 채널 / 표류동굴 CH 1","통합 채널 / 표류동굴 CH 2","통합 채널 / 표류동굴 CH 3","통합 채널 / 표류동굴 CH 4","통합 채널 / 표류동굴 CH 5","통합 채널 / 표류동굴 CH 6","통합 채널 / 표류동굴 CH 7","통합 채널 / 표류동굴 CH 8","통합 채널 / 표류동굴 CH 9","통합 채널 / 표류동굴 CH 10","통합 채널 / 표류동굴 CH 11","통합 채널 / 표류동굴 CH 12","통합 채널 / 표류동굴 CH 13","통합 채널 / 표류동굴 CH 14","통합 채널 / 표류동굴 CH 15","통합 채널 / 표류동굴 CH 16","통합 채널 / 표류동굴 CH 17","통합 채널 / 표류동굴 CH 18","통합 채널 / 표류동굴 CH 19","통합 채널 / 표류동굴 CH 20",
-	"통합 채널 / 역천의 폭포 CH 1","통합 채널 / 역천의 폭포 CH 2","통합 채널 / 역천의 폭포 CH 3","통합 채널 / 역천의 폭포 CH 4","통합 채널 / 역천의 폭포 CH 5","통합 채널 / 역천의 폭포 CH 6","통합 채널 / 역천의 폭포 CH 7","통합 채널 / 역천의 폭포 CH 8","통합 채널 / 역천의 폭포 CH 9","통합 채널 / 역천의 폭포 CH 10","통합 채널 / 역천의 폭포 CH 11","통합 채널 / 역천의 폭포 CH 12","통합 채널 / 역천의 폭포 CH 13",
-	"통합 채널 / 체념의 빙벽 CH 14","통합 채널 / 체념의 빙벽 CH 15","통합 채널 / 체념의 빙벽 CH 16","통합 채널 / 체념의 빙벽 CH 17","통합 채널 / 체념의 빙벽 CH 18","통합 채널 / 체념의 빙벽 CH 19","통합 채널 / 체념의 빙벽 CH 20","통합 채널 / 체념의 빙벽 CH 21","통합 채널 / 체념의 빙벽 CH 22","통합 채널 / 체념의 빙벽 CH 23","통합 채널 / 체념의 빙벽 CH 24","통합 채널 / 체념의 빙벽 CH 25","통합 채널 / 체념의 빙벽 CH 26",
-	"통합 채널 / 안트베르 협곡 CH 1","통합 채널 / 안트베르 협곡 CH 2","통합 채널 / 안트베르 협곡 CH 3","통합 채널 / 안트베르 협곡 CH 4","통합 채널 / 안트베르 협곡 CH 5","통합 채널 / 안트베르 협곡 CH 6","통합 채널 / 안트베르 협곡 CH 7","통합 채널 / 안트베르 협곡 CH 8","통합 채널 / 안트베르 협곡 CH 9","통합 채널 / 안트베르 협곡 CH 10",
-	"통합 채널 / 해상열차 CH 1","통합 채널 / 해상열차 CH 2","통합 채널 / 해상열차 CH 3","통합 채널 / 해상열차 CH 4","통합 채널 / 해상열차 CH 5",
-	"통합 채널 / 시간의 문 CH 11","통합 채널 / 시간의 문 CH 12","통합 채널 / 시간의 문 CH 13","통합 채널 / 시간의 문 CH 14","통합 채널 / 시간의 문 CH 15","통합 채널 / 시간의 문 CH 16","통합 채널 / 시간의 문 CH 17","통합 채널 / 시간의 문 CH 18","통합 채널 / 시간의 문 CH 19","통합 채널 / 시간의 문 CH 20","통합 채널 / 시간의 문 CH 21","통합 채널 / 시간의 문 CH 22","통합 채널 / 시간의 문 CH 23",
-	"통합 채널 / 파워 스테이션 CH 1","통합 채널 / 파워 스테이션 CH 2","통합 채널 / 파워 스테이션 CH 3","통합 채널 / 파워 스테이션 CH 4","통합 채널 / 파워 스테이션 CH 5","통합 채널 / 파워 스테이션 CH 6","통합 채널 / 파워 스테이션 CH 7","통합 채널 / 파워 스테이션 CH 8","통합 채널 / 파워 스테이션 CH 9","통합 채널 / 파워 스테이션 CH 10",
-	"통합 채널 / 노블 스카이 CH 21","통합 채널 / 노블 스카이 CH 22","통합 채널 / 노블 스카이 CH 23","통합 채널 / 노블 스카이 CH 24","통합 채널 / 노블 스카이 CH 25",
+	[
+	"통합 채널 / 실버크라운 CH 1","통합 채널 / 실버크라운 CH 2","통합 채널 / 실버크라운 CH 3","통합 채널 / 실버크라운 CH 4","통합 채널 / 실버크라운 CH 5","통합 채널 / 실버크라운 CH 6","통합 채널 / 실버크라운 CH 7","통합 채널 / 실버크라운 CH 8","통합 채널 / 실버크라운 CH 9","통합 채널 / 실버크라운 CH 11","통합 채널 / 실버크라운 CH 12","통합 채널 / 실버크라운 CH 13","통합 채널 / 실버크라운 CH 14","통합 채널 / 실버크라운 CH 15","통합 채널 / 실버크라운 CH 16","통합 채널 / 실버크라운 CH 17","통합 채널 / 실버크라운 CH 18","통합 채널 / 실버크라운 CH 19",
+	"통합 채널 / 멜트다운 CH 1","통합 채널 / 멜트다운 CH 2","통합 채널 / 멜트다운 CH 3","통합 채널 / 멜트다운 CH 4","통합 채널 / 멜트다운 CH 5","통합 채널 / 멜트다운 CH 6","통합 채널 / 멜트다운 CH 7","통합 채널 / 멜트다운 CH 8","통합 채널 / 멜트다운 CH 9","통합 채널 / 멜트다운 CH 11","통합 채널 / 멜트다운 CH 12","통합 채널 / 멜트다운 CH 13","통합 채널 / 멜트다운 CH 14","통합 채널 / 멜트다운 CH 15","통합 채널 / 멜트다운 CH 16","통합 채널 / 멜트다운 CH 17","통합 채널 / 멜트다운 CH 18","통합 채널 / 멜트다운 CH 19",
+	"통합 채널 / 표류동굴 CH 1","통합 채널 / 표류동굴 CH 2","통합 채널 / 표류동굴 CH 3","통합 채널 / 표류동굴 CH 4","통합 채널 / 표류동굴 CH 5","통합 채널 / 표류동굴 CH 6","통합 채널 / 표류동굴 CH 7","통합 채널 / 표류동굴 CH 8","통합 채널 / 표류동굴 CH 9","통합 채널 / 표류동굴 CH 11","통합 채널 / 표류동굴 CH 12","통합 채널 / 표류동굴 CH 13","통합 채널 / 표류동굴 CH 14","통합 채널 / 표류동굴 CH 15","통합 채널 / 표류동굴 CH 16","통합 채널 / 표류동굴 CH 17","통합 채널 / 표류동굴 CH 18","통합 채널 / 표류동굴 CH 19",
+	"통합 채널 / 역천의 폭포 CH 1","통합 채널 / 역천의 폭포 CH 2","통합 채널 / 역천의 폭포 CH 3","통합 채널 / 역천의 폭포 CH 4","통합 채널 / 역천의 폭포 CH 5","통합 채널 / 역천의 폭포 CH 6","통합 채널 / 역천의 폭포 CH 7","통합 채널 / 역천의 폭포 CH 8","통합 채널 / 역천의 폭포 CH 9","통합 채널 / 역천의 폭포 CH 11","통합 채널 / 역천의 폭포 CH 12","통합 채널 / 역천의 폭포 CH 13",
+	"통합 채널 / 체념의 빙벽 CH 14","통합 채널 / 체념의 빙벽 CH 15","통합 채널 / 체념의 빙벽 CH 16","통합 채널 / 체념의 빙벽 CH 17","통합 채널 / 체념의 빙벽 CH 18","통합 채널 / 체념의 빙벽 CH 19","통합 채널 / 체념의 빙벽 CH 21","통합 채널 / 체념의 빙벽 CH 22","통합 채널 / 체념의 빙벽 CH 23","통합 채널 / 체념의 빙벽 CH 24","통합 채널 / 체념의 빙벽 CH 25",
+	"통합 채널 / 안트베르 협곡 CH 1","통합 채널 / 안트베르 협곡 CH 2","통합 채널 / 안트베르 협곡 CH 3","통합 채널 / 안트베르 협곡 CH 4","통합 채널 / 안트베르 협곡 CH 5","통합 채널 / 안트베르 협곡 CH 6","통합 채널 / 안트베르 협곡 CH 7","통합 채널 / 안트베르 협곡 CH 8","통합 채널 / 안트베르 협곡 CH 9",
+	"통합 채널 / 해상열차 CH 1","통합 채널 / 해상열차 CH 2","통합 채널 / 해상열차 CH 3","통합 채널 / 해상열차 CH 4",
+	"통합 채널 / 시간의 문 CH 11","통합 채널 / 시간의 문 CH 12","통합 채널 / 시간의 문 CH 13","통합 채널 / 시간의 문 CH 14","통합 채널 / 시간의 문 CH 15","통합 채널 / 시간의 문 CH 16","통합 채널 / 시간의 문 CH 17","통합 채널 / 시간의 문 CH 18","통합 채널 / 시간의 문 CH 19","통합 채널 / 시간의 문 CH 21","통합 채널 / 시간의 문 CH 22","통합 채널 / 시간의 문 CH 23",
+	"통합 채널 / 파워 스테이션 CH 1","통합 채널 / 파워 스테이션 CH 2","통합 채널 / 파워 스테이션 CH 3","통합 채널 / 파워 스테이션 CH 4","통합 채널 / 파워 스테이션 CH 5","통합 채널 / 파워 스테이션 CH 6","통합 채널 / 파워 스테이션 CH 7","통합 채널 / 파워 스테이션 CH 8","통합 채널 / 파워 스테이션 CH 9",
+	"통합 채널 / 노블 스카이 CH 21","통합 채널 / 노블 스카이 CH 22","통합 채널 / 노블 스카이 CH 23","통합 채널 / 노블 스카이 CH 24",
 	"통합 채널 / 죽은자의 성 CH 21","통합 채널 / 죽은자의 성 CH 22","통합 채널 / 죽은자의 성 CH 23","통합 채널 / 죽은자의 성 CH 24","통합 채널 / 죽은자의 성 CH 25",
 	"통합 채널 / (구)이계 던전 CH 1","통합 채널 / (구)이계 던전 CH 2","통합 채널 / (구)이계 던전 CH 3","통합 채널 / (구)이계 던전 CH 4","통합 채널 / (구)이계 던전 CH 5","통합 채널 / (구)이계 던전 CH 6","통합 채널 / (구)이계 던전 CH 7",
-	"통합 채널 / (신)이계 던전 CH 8","통합 채널 / (신)이계 던전 CH 9","통합 채널 / (신)이계 던전 CH 10","통합 채널 / (신)이계 던전 CH 11","통합 채널 / (신)이계 던전 CH 12","통합 채널 / (신)이계 던전 CH 13","통합 채널 / (신)이계 던전 CH 14","통합 채널 / (신)이계 던전 CH 15",
+	"통합 채널 / (신)이계 던전 CH 8","통합 채널 / (신)이계 던전 CH 9","통합 채널 / (신)이계 던전 CH 11","통합 채널 / (신)이계 던전 CH 12","통합 채널 / (신)이계 던전 CH 13","통합 채널 / (신)이계 던전 CH 14","통합 채널 / (신)이계 던전 CH 15",
 	"통합 채널 / 거래 - 경매장 CH 16","통합 채널 / 거래 - 경매장 CH 17",
 	"통합 채널 / 고대 던전 CH 16",
 	"통합 채널 / 망자의 협곡 CH 21","통합 채널 / 망자의 협곡 CH 22","통합 채널 / 망자의 협곡 CH 23","통합 채널 / 망자의 협곡 CH 24","통합 채널 / 망자의 협곡 CH 25",
-	"통합 채널 / 차원의 균열 CH 11","통합 채널 / 차원의 균열 CH 12","통합 채널 / 차원의 균열 CH 13","통합 채널 / 차원의 균열 CH 14","통합 채널 / 차원의 균열 CH 15","통합 채널 / 차원의 균열 CH 16","통합 채널 / 차원의 균열 CH 17","통합 채널 / 차원의 균열 CH 18","통합 채널 / 차원의 균열 CH 19","통합 채널 / 차원의 균열 CH 20",
+	"통합 채널 / 차원의 균열 CH 11","통합 채널 / 차원의 균열 CH 12","통합 채널 / 차원의 균열 CH 13","통합 채널 / 차원의 균열 CH 14","통합 채널 / 차원의 균열 CH 15","통합 채널 / 차원의 균열 CH 16","통합 채널 / 차원의 균열 CH 17","통합 채널 / 차원의 균열 CH 18","통합 채널 / 차원의 균열 CH 19",
 	"일반 채널 / 거래 - 경매장",
 	"일반 채널 / 일반채널 (첫번째)","일반 채널 / 일반채널 (두번째)"],//통합 서버
 	["안톤 공격대 CH 17","안톤 공격대 CH 18","안톤 공격대 CH 19",
-	"안톤 공격대 CH 20","안톤 공격대 CH 21","안톤 공격대 CH 22",
-	"안톤 공격대 CH 23","안톤 공격대 CH 24","안톤 공격대 CH 25",
-	"안톤 공격대 CH 26"]//레이드 통합
+	"안톤 공격대 CH 21","안톤 공격대 CH 22",
+	"안톤 공격대 CH 23","안톤 공격대 CH 24","안톤 공격대 CH 25"]//레이드 통합
 ];
 //추천 - 던전, 난이도
 var A_dungeonList_85 = [
@@ -164,7 +163,7 @@ var A_soraList = [
 		//====================================================================================================================
 		// ※ 답변 준비
 		//====================================================================================================================
-		
+
 //답변-기본
 var answer = [
 	[""],	//채널
@@ -190,7 +189,7 @@ function getAnswer() {
 			Math.seedrandom(tempFile + (new Date().getTime()));
 		}
 	}
-	
+
 
 	//답변-서버언급
 		answer_server = "<span class='orange'>" + serverName[server] + "</span>";
@@ -209,13 +208,13 @@ function getAnswer() {
 				answer[0] += "채널은 <span class='orange'>'"
 				+ A_channelList[1][temp]
 				+ "'</span>이(가)";
-				
+
 				break;
 			default://일반 서버
 				answer[0] += "채널은 <span class='orange'>'"
 				+ A_channelList[0][temp]
 				+ "'</span>이(가)";
-				
+
 				break;
 		}
 	//답변-시간
@@ -260,8 +259,8 @@ function getAnswer() {
 			answer[4] += A_difficultyList_85[i][temp].toString();
 		}
 		answer[4] += " 난이도가";
-		
-		
+
+
 	//답변-*포춘쿠키
 		for (i=0;i<A_fortuneWeight.length;i++) {
 			for (j=0;j<A_fortuneWeight[i];j++) {
@@ -279,7 +278,7 @@ function getAnswer() {
 		answer_sora = "<span class='orange'>\
 		 " + A_soraList[temp] + "\
 		 </span>";
-	
+
 };
 
 
@@ -297,7 +296,7 @@ function shuffle() {//섞어주기
 		//====================================================================================================================
 		// ※ 부수적 함수
 		//====================================================================================================================
-		
+
 //url 패러미터 분석 (출처 : http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513#11582513)
 function getURLParameter(name, defaultKey) {
 	var temp = decodeURIComponent((new RegExp('[#|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.hash)||[,""])[1].replace(/\+/g, '%20'))||null;
@@ -311,7 +310,7 @@ function getURLParameter(name, defaultKey) {
 function loadJs(fileName, callBack){ // 자바스크립트 불러오기
     var script = document.createElement("script")
     script.type = "text/javascript";
-	
+
     if (script.readyState){  //IE
         script.onreadystatechange = function(){
             if (script.readyState == "loaded" ||
@@ -342,7 +341,7 @@ function loadImages(arr,callBack){ // 이미지 불러오기
 	for (var i = 0; i < arr.length; i++) {
 		img = new Image();
 		img.onload = function() {
-			//외부 처리 
+			//외부 처리
 			document.getElementById("start").innerHTML = "\
 			그림 로딩 ("+Math.round((((arr.length - remaining + 1)/arr.length)*100),0).toString()+"%)";
 			//내부 처리
@@ -352,7 +351,7 @@ function loadImages(arr,callBack){ // 이미지 불러오기
 			};
 		};
 		img.onerror = function() {
-			//외부 처리 
+			//외부 처리
 			document.getElementById("start").innerHTML = "\
 			그림 로딩 ("+Math.round((((arr.length - remaining + 1)/arr.length)*100),0).toString()+"%)";
 			--remaining;
@@ -365,7 +364,7 @@ function loadImages(arr,callBack){ // 이미지 불러오기
 		<img src='" + img.src + "'>";
 		imagesArray.push(img);
 	};
-	
+
 };
 
 
@@ -374,13 +373,13 @@ function getNatural(DOMelement,result) { //naturalWidth, naturalHeight 호출
 
 	var img = new Image();
 	img.src = DOMelement.src;
-	
+
 	if (result == "width") {
 		return img.width
 	} else if(result == "height") {
 		return img.height
-	}; 
-	
+	};
+
 }
 
 if (!Array.prototype.indexOf)
@@ -412,8 +411,8 @@ if (!Array.prototype.indexOf)
 
 function getPage(num) {
 	if (num<cha.length-1 && eventName == "내캐릭터") {//특수상황 로드 - "내 캐릭터 추천"
-	
-	
+
+
 		//캐릭터, 텍스트를 비교하여 등장하는 캐릭터만 로드 (자기캐릭터는 빼고)
 		for (y=0;y<text.length;y++) {
 			//캐릭터, 텍스트를 비교하여 등장하는 캐릭터만 로드
@@ -425,11 +424,11 @@ function getPage(num) {
 			};
 		};
 		getPage(num+1);
-		
-		
+
+
 	} else if (num<cha.length-1 && eventName == "") {//일반상황 로드
-	
-	
+
+
 		//캐릭터, 텍스트를 비교하여 등장하는 캐릭터만 로드
 		for (y=0;y<text.length;y++){
 			if (cha[num][0] != "" && cha[num][0] == text[y][0]) {
@@ -440,8 +439,8 @@ function getPage(num) {
 			};
 		};
 		getPage(num+1);
-		
-		
+
+
 	} else {
 		//자기 캐릭터 로드
 		if (eventName == "내캐릭터") {
@@ -459,7 +458,7 @@ function getPage(num) {
 			document.getElementById("main").style.backgroundImage = "url('" + images + "front/" + front + ".jpg')";//첫 화면 생성
 			document.getElementById("main").style.backgroundSize = "700px 525px";
 		};
-		
+
 		if (autoPlay == 1) { //자동재생 관련 출력
 			document.getElementById("auto").innerHTML = "<span style='font-family:SSTM;color:lightgreen;'>자동</span> 재생중 (" + autoTime+ "초)";
 			document.getElementById("play").innerHTML = "||";
@@ -496,11 +495,11 @@ function getPage(num) {
 				}
 			};
 		};
-		
+
 		//제목 표시, 첫페이지 표시
 		document.getElementById("title").innerHTML = title; // 제목 표시
 		document.getElementById("now").innerHTML = (step).toString() + "/" + stepMax; //첫 페이지번호 표시
-		
+
 
 		//시작 버튼
 		document.getElementById("start").innerHTML = "시작"; //실행 버튼
@@ -520,7 +519,7 @@ function getPage(num) {
 				dialog(text,0);
 			}, Math.max(autoTime*1000,3000));
 		}
-		
+
 		//뒤로 버튼
 		document.getElementById("toBefore").onclick = "none";
 		document.getElementById("toBefore").onclick = function() {
@@ -592,7 +591,7 @@ function getPage(num) {
 				document.getElementById("popup").innerHTML = "첫 페이지 입니다";
 			};
 		};
-		
+
 		//되돌아가기 버튼
 		document.getElementById("return").onclick = "none"; //처음부터 버튼
 		document.getElementById("return").onclick = function() { //되돌아가기 버튼
@@ -663,7 +662,7 @@ function getPage(num) {
 			};
 		};
 	};
-		
+
 };
 
 
@@ -713,7 +712,7 @@ function clearAuto() {
 	clearTimeout(auto);
 	document.getElementById("auto").innerHTML = "<span style='font-family:SSTM;color:orange;'>수동</span> 재생중";
 	document.getElementById("play").innerHTML = "▶";
-	autoPlay = 0;	
+	autoPlay = 0;
 }
 
 function stopAuto() {
@@ -721,7 +720,7 @@ function stopAuto() {
 	document.getElementById("popup").innerHTML = "자동재생 실행";
 	document.getElementById("auto").innerHTML = "<span style='font-family:SSTM;color:orange;'>분기점</span> 선택중";
 	document.getElementById("play").innerHTML = "▶";
-	autoPlay = 0;	
+	autoPlay = 0;
 }
 
 
@@ -839,7 +838,7 @@ function wording(at, textData, num, now)
 						document.getElementById("choose" + (i+1).toString()).style.visibility = "visible";
 						document.getElementById("choose" + (i+1).toString()).innerHTML = textData[i+5];
 						document.getElementById("choose" + (i+1).toString()).onclick = "none";
-						// 이동용 버튼 선택 시 
+						// 이동용 버튼 선택 시
 						document.getElementById("choose" + (i+1).toString()).onclick = function(target) {
 							return function() {//onclick에 i 이식 (출처 : http://stackoverflow.com/questions/6048561/setting-onclick-to-use-current-value-of-variable-in-loop)
 								//2.3.2.0 버튼 "틀" 숨기기 ('2'번 대사위치 한정)
@@ -926,7 +925,7 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 	endPage = 0;
 	page = i;
 	step += 1;//대화 시작 시 step 증가
-	
+
 	//※ '이동 only(3)'인 경우 : 다 무시하고 이동 실시
 	if (text[i][2] == "3") {
 		if (i+text[i][4] == 0) { //이동할 경우 첫 페이지로 돌아간다면
@@ -941,10 +940,10 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 		dialog(text,i+text[i][4]);
 		return;
 	}
-	
+
 	//페이지 번호 표시
 	document.getElementById("now").innerHTML = (step).toString() + "/" + stepMax; // 현재 페이지번호 출력
-	
+
 	//cover 처리
 	document.getElementById("cover").style.backgroundImage = "url('" + images + "guide0.png')"; //툴팁 닫기
 	document.getElementById("cover").className = "";
@@ -953,8 +952,8 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 		clearAuto();
 		skip();
 	};
-	
-	
+
+
 	//배경 조성
 	//1. 배경옮김이 잔재 제거
 		//1.1 전환 배경 제거
@@ -992,9 +991,9 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 			document.getElementById('sprite').style.visibility = "hidden";
 		}
 		document.getElementById('main').style.backgroundSize="700px 525px";
-	} 
-	
-	
+	}
+
+
 	//대사 나올 위치 지정, 거기에 있는 이미지 숨기기
 	if (i == 0 && text[i][2] != "2") { //첫 시작 시 ("2"가 아니라면 무조건 아래)
 		side = "bottom"
@@ -1028,15 +1027,15 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 		spin();
 	}
 
-	
+
 	//대사가 나올 대사창 생성, 이름 등장
 	if (text[i][2] != "0") { //"Image Only"가 아니라면
 		document.getElementById(side).style.visibility = "visible";
 		document.getElementById(side + "Name").innerHTML = indexCha(text[i][0],1);
 		lastSpeaker = text[i][0]; //이름 별도로 저장 (화자 변경 판별용)
 	};
-	
-	
+
+
 	//이미지 배치, toNext 배치
 	if (text[i][2] == "0") { //"Image Only일 경우"
 		//toNext만 배치
@@ -1059,7 +1058,7 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 				document.getElementById('img' + listCha[x]).className = "";
 				document.getElementById('img' + listCha[x]).style.visibility = "hidden";
 			} else if (document.getElementById('img' + listCha[x]).className == "top") {
-				document.getElementById('img' + listCha[x]).style.opacity=0.7;	
+				document.getElementById('img' + listCha[x]).style.opacity=0.7;
 			}
 		}
 		document.getElementById('top').style.opacity=0.7;
@@ -1085,27 +1084,27 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 		document.getElementById('toNext').style.backgroundPosition="";
 		document.getElementById('toNext').style.backgroundRepeat="";
 		document.getElementById('toNext').style.border="";
-		
+
 	} else { // 위에 배치
 		//이미지 지우기 & 투명도 증가
 		for (x=0;x<listCha.length;x++) {
 			if (document.getElementById('img' + listCha[x]).className == "top"){
 				document.getElementById('img' + listCha[x]).className = "";
-				document.getElementById('img' + listCha[x]).style.visibility = "hidden";	
+				document.getElementById('img' + listCha[x]).style.visibility = "hidden";
 			} else if (document.getElementById('img' + listCha[x]).className == "bottom") {
 				document.getElementById('img' + listCha[x]).style.opacity=0.7;
 			}
 		}
-		document.getElementById('bottom').style.opacity=0.7;	
+		document.getElementById('bottom').style.opacity=0.7;
 		//이미지 위치시키기
 		document.getElementById('img' + indexCha(text[i][0],2)).className = "top";
 		document.getElementById('img' + indexCha(text[i][0],2)).style.bottom = "310px";
 		document.getElementById('img' + indexCha(text[i][0],2)).style.left = "501px";
-		document.getElementById('img' + indexCha(text[i][0],2)).style.opacity=1;	
+		document.getElementById('img' + indexCha(text[i][0],2)).style.opacity=1;
 		//대사 캐릭터 이미지 등장
 		document.getElementById('img' + indexCha(text[i][0],2)).style.visibility = "visible";
 		//이미지 투명도 제거
-		document.getElementById('top').style.opacity=1;	
+		document.getElementById('top').style.opacity=1;
 		//toNext 배치, 등장
 		document.getElementById('toNext').style.top = "185px";
 		document.getElementById('toNext').style.left = "335px";
@@ -1120,10 +1119,10 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 		document.getElementById('toNext').style.backgroundRepeat="";
 		document.getElementById('toNext').style.border="";
 	}
-	
+
 	//대사 읽기 대기 - toNext를 "스킵"으로 바꿈
 	document.getElementById("toNext").style.backgroundImage = "url('" + images + "dialog_skip.png')";
-	
+
 	//대사 읽기 시작
 	//IF "Image Only"
 	if (text[i][2] == "0") { //"Image Only" → 배경옮긺이 호출
@@ -1157,7 +1156,7 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 // ※ Onload
 //==========================================================================================================================================
 window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 실시
-	
+
 
 	//외부 패러미터 호출 (빈 값이 아니면 대입시키기)
 	autoPlay = parseInt(getURLParameter("autoGo","1"));
@@ -1187,7 +1186,7 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		}
 		//2. 점집 답변 준비 (점보기 전용 설정)
 		getAnswer();
-		
+
 	//대사 스크립트 불러오기
 	if ( tempFile ){
 		//로딩 안내 : 대사집 로딩
@@ -1198,8 +1197,8 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		}
 		loadJs("./91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {
 			//※ 대사집 불러오기 전까진 다른 작업 수행 금지
-			
-			
+
+
 			//1. 각종 이미지 선로딩 작업 대상 정리 (※ 주의 : IE는 별도로 로드하기에, 수정 시 함수도 수정할것)
 			//1.1 로딩 안내 : 이미지 로딩
 			document.getElementById("start").innerHTML = "그림 로딩 중...";
@@ -1256,13 +1255,13 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 			//1.2. 선로딩 실시
 			loadImages(imageList,function(){
 				//※ 이미지 선로딩 전까지 다른 작업 수행 금지
-				
-				
+
+
 				//로딩 안내 : 마무리
 				document.getElementById("start").innerHTML = "마무리 중...";
-				
+
 				// 총 페이지수 계산, '전체 페이지' 설정
-				lenText = 0; 
+				lenText = 0;
 				for (i=0;i<text.length;i++) {
 					if (!(text[i][0] == "" && text[i][1] == "" && text[i][2] == "" && text[i][3] == "")) {
 						lenText += 1;
@@ -1275,8 +1274,8 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 				}
 				if (stepMax != "??") { //대사에서 "이동 기능"이 사용되었을 경우
 					stepMax = lenText.toString(); //전체 페이지 정상 출력
-				}				
-				
+				}
+
 				document.getElementById("return").onmouseover = function() {
 					if (document.getElementById("cover").className != "starting" && document.getElementById("cover").className != "ending"){
 						document.getElementById("popup").style.top = "505px";
@@ -1349,13 +1348,13 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 					document.getElementById("now").onmouseout = function() {
 						document.getElementById("popup").style.visibility="hidden";
 					};
-					
+
 				getPage(0); //페이지 선로딩 (후 실행)
-				
-				
+
+
 			});//이미지 선로딩 종료
 		});//대사집 불러오기 종료
-		
+
 	} else {
 		alert("※ 오류 : 불러올 대사집이 지정되지 않았습니다.\
 		\n대사 위치 : ./91/1/" +tempFile + ".js");
