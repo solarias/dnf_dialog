@@ -97,12 +97,22 @@ var A_channelList = [//서버별 채널 리스트
 	"안톤 공격대 CH 23","안톤 공격대 CH 24","안톤 공격대 CH 25"]//레이드 통합
 ];
 //추천 - 던전, 난이도
-var A_dungeonList_85 = [
+var A_dungeonList_power = [
 	["<span class='orange'>"],
-	["푸르츠 발전소","트롬베 발전소","그란디네 발전소","매달린 망루","루크린제","강철의 브라키움","샐러맨더의 화로","빛의 연회장"],
+	["푸르츠 발전소","트롬베 발전소","그란디네 발전소"],
 	["</span>"]
 ];
-var A_difficultyList_85 = [
+var A_dungeonList_castle = [
+	["<span class='orange'>"],
+	["매달린 망루","루크린제","강철의 브라키움","샐러맨더의 화로","빛의 연회장"],
+	["</span>"]
+];
+var A_dungeonList_metro = [
+	["<span class='orange'>"],
+	["시간의 광장","수인의 협곡","공포의 은식처","돌풍지대","붉은 마녀의 숲"],
+	["</span>"]
+];
+var A_difficultyList = [
 	["<span class='orange'>"],
 	["노멀","익스퍼트","마스터","킹","슬레이어"],
 	["</span>"]
@@ -255,21 +265,53 @@ function getAnswer() {
 			answer[3] += A_npcList[i][temp].toString();
 		}
 		answer[3] += "이(가)";
-	//답변-지옥파티 던전&난이도
+	//답변-지옥파티(파워스테이션) 던전&난이도
 		answer[4] = "";
 		answer[4] += "지옥파티는 ";
-		for (i=0;i<A_dungeonList_85.length;i++) {
-			temp = Math.floor(Math.random() * A_dungeonList_85[i].length);
+		for (i=0;i<A_dungeonList_power.length;i++) {
+			temp = Math.floor(Math.random() * A_dungeonList_power[i].length);
 			//랜덤변수 설정 후 적용
-			answer[4] += A_dungeonList_85[i][temp].toString();
+			answer[4] += A_dungeonList_power[i][temp].toString();
 		}
 		answer[4] += " 던전과 ";
-		for (i=0;i<A_difficultyList_85.length;i++) {
-			temp = Math.floor(Math.random() * A_difficultyList_85[i].length);
+		for (i=0;i<A_difficultyList.length;i++) {
+			temp = Math.floor(Math.random() * A_difficultyList[i].length);
 			//랜덤변수 설정 후 적용
-			answer[4] += A_difficultyList_85[i][temp].toString();
+			answer[4] += A_difficultyList[i][temp].toString();
 		}
 		answer[4] += " 난이도가";
+
+	//답변-지옥파티(죽은자의 성) 던전&난이도
+		answer[5] = "";
+		answer[5] += "지옥파티는 ";
+		for (i=0;i<A_dungeonList_castle.length;i++) {
+			temp = Math.floor(Math.random() * A_dungeonList_castle[i].length);
+			//랜덤변수 설정 후 적용
+			answer[5] += A_dungeonList_castle[i][temp].toString();
+		}
+		answer[5] += " 던전과 ";
+		for (i=0;i<A_difficultyList.length;i++) {
+			temp = Math.floor(Math.random() * A_difficultyList[i].length);
+			//랜덤변수 설정 후 적용
+			answer[5] += A_difficultyList[i][temp].toString();
+		}
+		answer[5] += " 난이도가";
+
+	//답변-지옥파티(메트로센터) 던전&난이도
+		answer[6] = "";
+		answer[6] += "지옥파티는 ";
+		for (i=0;i<A_dungeonList_metro.length;i++) {
+			temp = Math.floor(Math.random() * A_dungeonList_metro[i].length);
+			//랜덤변수 설정 후 적용
+			answer[6] += A_dungeonList_metro[i][temp].toString();
+		}
+		answer[6] += " 던전과 ";
+		for (i=0;i<A_difficultyList.length;i++) {
+			temp = Math.floor(Math.random() * A_difficultyList[i].length);
+			//랜덤변수 설정 후 적용
+			answer[6] += A_difficultyList[i][temp].toString();
+		}
+		answer[6] += " 난이도가";
 
 
 	//답변-*포춘쿠키
