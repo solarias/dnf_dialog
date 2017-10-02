@@ -1,14 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta charset="utf-8">
-	
+		<!--라이브러리 패키지 : 함수모음, 화면 자동확대, 터치 딜레이 제거 (시작)-->
+		<script type="text/javascript" src="../function/tool/subtool.js"></script>
+		<script type="text/javascript" src="../function/tool/fastclick.js"></script>
+		<!--라이브러리 패키지 (끝)-->
+
 		<link rel="stylesheet" type="text/css" href="./fraStyle.css">
 	</head>
-	<body>	
+	<body>
 		<div id="wrapper">
-		
+
 			<div id="cover" class="" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
 			</div>
 
@@ -38,7 +42,7 @@
 				<div id="now" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
 				</div>
 				<!--내비게이션 버튼들-->
-				
+
 				<!--선택지 버튼들 : 분기점 전용-->
 				<div id="choose1" class="choose" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">
 					선택지 1
@@ -53,14 +57,14 @@
 					선택지 4
 				</div>
 				<!--선택지 버튼들 : 분기점 전용-->
-				
+
 
 			<div id="main">
-			
+
 				<div id="changeBack" class="" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
 					<img id="changeSprite" /> <!--전환 배경 캐릭터-->
 				</div>
-			
+
 				<img id="sprite" /> <!--배경 캐릭터-->
 
 				<div id="top">
@@ -69,10 +73,10 @@
 					<div id="topText">
 					</div>
 				</div>
-				
+
 				<div id="center">
 				</div>
-				
+
 				<div id="bottom">
 					<div id="bottomPic">
 					</div>
@@ -81,20 +85,21 @@
 					<div id="bottomText">
 					</div>
 				</div>
-				
+
 				<div id="toNext">
 				</div>
 			</div>
-			
+
 			<div id="footer" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" >
 			</div>
 		</div>
 
 		<div id="imagePreloader"></div>
-		
+
 
 		<script type="text/javascript" src="./seedrandom.js"></script>
-		
+
+		<script type="text/javascript" src="../dnf/js/fortuneResultList.js"></script>
 		<script type="text/javascript" src="./fraCharacter.js"></script>
 		<script type="text/javascript" src="./fraCoop.js"></script>
 		<script type="text/javascript" src="./jumFraScript.js"></script>

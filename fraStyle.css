@@ -3,7 +3,7 @@
 	margin:0px;
 	border:0px;
 	text-decoration:none;
-	
+
 	font-size:100%;
 }
 
@@ -18,7 +18,7 @@ img {
 	position:absolute;
 	bottom:400px;
 	left:0px;
-	
+
 	display:block;
 	visibility:hidden;
 }
@@ -56,7 +56,7 @@ body {
 	z-index:0;
 	width:700px;
 	height:565px;
-	
+
 	background-color:black;
 	border:1px black solid;
 }
@@ -66,7 +66,7 @@ body {
 		z-index:10;
 		width:700px;
 		height:525px;
-		
+
 		background-color:black;
 	}
 
@@ -75,13 +75,13 @@ body {
 			z-index:50;
 			width:702px;
 			height:525px;
-			
+
 			background-image:url('./images/guide0.png');
 		}
 				#cover:hover {
 					cursor:default;
 				}
-				
+
 		#changeBack {
 			position:absolute;
 			z-index:10;
@@ -89,9 +89,9 @@ body {
 			left:100%;
 			width:702px;
 			height:525px;
-			
+
 			border-left:1px black solid;
-			
+
 			visibility:hidden;
 		}
 			#start {
@@ -102,15 +102,15 @@ body {
 				padding-top:20px;
 				width:240px;
 				height:50px;
-				
+
 				background-image:url('./images/clickable.png');
 				background-color:rgba(255,255,255,0.5);
 				-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				zoom: 1;
-				
+
 				border:2px black solid;
-				
+
 				font-family:SSTM;
 				font-size:30px;
 				text-align:center;
@@ -120,7 +120,7 @@ body {
 					-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFFFFFFF);
 					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFFFFFFF);
 					zoom: 1;
-					
+
 					cursor:pointer;
 					cursor:hand;
 				}
@@ -131,10 +131,10 @@ body {
 				z-index:0;
 				width:40px;
 				height:34px;
-				
+
 				background-image:url('./images/return.png');
 				background-color:#FFA600;
-				
+
 				font-size:30px;
 				font-weight:bold;
 				text-align:center;
@@ -152,10 +152,10 @@ body {
 				left:75px;
 				width:160px;
 				height:25px;
-				
+
 				background-color:#242424;
 				border:1px gray solid;
-				
+
 				color:white;
 				font-family:SSTM;
 				font-size:20px;
@@ -174,19 +174,19 @@ body {
 				z-index:0;
 				width:25px;
 				height:25px;
-				
+
 				background-image:url('./images/clickable.png');
 				background-color:rgba(255,255,255,0.5);
 				-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				zoom: 1;
 				border:1px gray solid;
-				
+
 				font-family:SSTM;
 				font-size:20px;
 				font-weight:bold;
 				text-align:left;
-				
+
 				display:block;
 			}
 				#play:hover {
@@ -194,7 +194,7 @@ body {
 					-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFFFFFFF);
 					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFFFFFFF);
 					zoom: 1;
-				
+
 					cursor:pointer;
 					cursor:hand;
 				}
@@ -207,19 +207,19 @@ body {
 				z-index:0;
 				width:55px;
 				height:27px;
-				
+
 				background-image:url('./images/clickable.png');
 				background-color:rgba(255,255,255,0.5);
 				-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
 				zoom: 1;
 				border:1px gray solid;
-				
+
 				font-family:SSTM;
 				font-size:25px;
 				font-weight:bold;
 				text-align:left;
-				
+
 				display:block;
 			}
 				#toBefore:hover {
@@ -238,10 +238,10 @@ body {
 				left:400px;
 				width:200px;
 				height:25px;
-				
+
 				background-color:#242424;
 				border:1px gray solid;
-				
+
 				color:white;
 				font-family:SSTM;
 				font-size:20px;
@@ -258,10 +258,10 @@ body {
 				left:612px;
 				width:83px;
 				height:27px;
-				
+
 				background-color:#242424;
 				border:1px gray solid;
-				
+
 				color:white;
 				font-family:arial;
 				font-size:20px;
@@ -271,7 +271,7 @@ body {
 				#now:hover {
 						cursor:default;
 				}
-				
+
 			.choose {
 				position:absolute;
 				z-index:60;
@@ -279,24 +279,24 @@ body {
 				padding-left:30px;
 				width:360px;
 				height:25px;
-				
+
 				background-image:url('./images/radio0.png');
 				background-repeat:no-repeat;
-				
+
 				font-family:SSTM;
 				color:#E1C9A7;
 				font-size:25px;
-				
+
 				visibility:hidden;
 			}
 				.choose:hover {
 					margin:1px 1px 1px 0px;
 					cursor:pointer;
 					cursor:hand;
-				
+
 				background-image:url('./images/radio1.png');
-					
-					border:2px lightblue solid;	
+
+					border:2px lightblue solid;
 				}
 				.choose:active {
 				background-image:url('./images/radio2.png');
@@ -317,7 +317,7 @@ body {
 					top:518px;
 					left:208px;
 				}
-			
+
 			#popup {
 				position:absolute;
 				z-index:100;
@@ -325,21 +325,21 @@ body {
 				top:0px;
 				left:0px;
 				height:14px;
-				
+
 				background-color:yellow;
 				border:1px;
-				
+
 				font-family:Arial;
 				font-size:12px;
-				
+
 				visibility:hidden;
 			}
-		
+
 		#sprite {
 			position:absolute;
 			z-index:5;
 		}
-		
+
 		#top {
 			position:relative;
 			z-index:15;
@@ -347,9 +347,9 @@ body {
 			width:618px;
 			height:165px;
 			float:right;
-			
+
 			background-image:url('./images/dialog_frame.png');
-			
+
 			visibility:hidden;
 		}
 			#topPic {
@@ -367,9 +367,9 @@ body {
 				width:400px;
 				height:22px;
 				float:right;
-				
+
 				border-bottom:1px #E1C9A7 solid;
-				
+
 				font-family:SSTM;
 				color:#E1C9A7;
 				font-size:17px;
@@ -380,7 +380,7 @@ body {
 				width:401px;
 				height:112px;
 				float:clear;float:right;
-				
+
 				font-family:SSTM;
 				color:#E1C9A7;
 				font-size:17px;
@@ -402,9 +402,9 @@ body {
 			width:618px;
 			height:165px;
 			float:clear;float:left;
-			
+
 			background-image:url('./images/dialog_frame.png');
-			
+
 			visibility:hidden;
 		}
 			#bottomPic {
@@ -430,9 +430,9 @@ body {
 				width:395px;
 				height:22px;
 				float:right;
-				
+
 				border-bottom:1px #E1C9A7 solid;
-				
+
 				font-family:SSTM;
 				color:#E1C9A7;
 				font-size:17px;
@@ -443,13 +443,13 @@ body {
 				width:397px;
 				height:112px;
 				float:clear;float:left;
-				
+
 				font-family:SSTM;
 				color:#E1C9A7;
 				font-size:17px;
 				line-height:120%;
 			}
-		
+
 		#toNext {
 			position:absolute;
 			padding-top:5px;
@@ -459,22 +459,22 @@ body {
 			bottom:0px;
 			width:140px;
 			height:26px;
-			
+
 			display:block;
 			visibility:hidden;
 		}
-		
+
 
 	#footer {
 		width:700px;
 		height:40px;
-		
+
 		background-image:url('./images/bar2.jpg');;
 	}
-	
+
 	#imagePreloader {
 		width:1px;
 		height:1px;
-		
+
 		display:none;
 	}
