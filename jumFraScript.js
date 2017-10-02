@@ -66,8 +66,8 @@ var A_channelList = [//서버별 채널 리스트
 	//레이드 통합
 	[]
 ];
-	A_channelLst[0] = deepCopy(resultList.channel);
-	A_channelLst[1] = deepCopy(resultList.anton);
+	A_channelList[0] = deepCopy(resultList.channel);
+	A_channelList[1] = deepCopy(resultList.anton);
 //추천 - 던전, 난이도
 var A_dungeonList_power = [
 	["<span class='orange'>"],
