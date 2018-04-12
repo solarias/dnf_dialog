@@ -994,7 +994,11 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 	//2. 배경 조성 실시
 	if (text[i][1] != "" && text[i][2] != "0") { //if not (배경입력칸 공란 or "Image only")
 		//2.1. 배경 조성
-		document.getElementById('main').style.backgroundImage="url('" + images + "back/" + text[i][1] + ".jpg')";
+		if (tempFile !== "ace") {
+			document.getElementById('main').style.backgroundImage="url('" + images + "back/" + text[i][1] + ".jpg')";
+		} else {
+			document.getElementById('main').style.backgroundImage="url('" + images + "90/" + text[i][1] + ".jpg')";
+		}
 		//2.2. 캐릭터 (있으면) 배치
 		if (indexCoop(text[i][1],0)) {//캐릭터 배치해야되면
 			//2.2.1 캐릭터 보이게
@@ -1154,7 +1158,11 @@ function dialog(text,i) { //대사 출력 & 이미지 출력 설정
 	//IF "Image Only"
 	if (text[i][2] == "0") { //"Image Only" → 배경옮긺이 호출
 		//1. 전환 배경 배치
-		document.getElementById('changeBack').style.backgroundImage="url('" + images + "back/" + text[i][1] + ".jpg')";
+		if (tempFile !== "ace") {
+			document.getElementById('changeBack').style.backgroundImage="url('" + images + "back/" + text[i][1] + ".jpg')";
+		} else {
+			document.getElementById('changeBack').style.backgroundImage="url('" + images + "90/" + text[i][1] + ".jpg')";
+		}
 		document.getElementById('changeBack').style.backgroundSize="700px 525px";
 		document.getElementById("changeBack").style.visibility="visible"; //배경옮김이 호출
 		//2. 전환 캐릭터 배치
@@ -1222,7 +1230,13 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 		if (eventName == "내캐릭터") {//"내 캐릭터 추천"은 classCode에 맞춰 불러옴
 			tempFile = "9101_" + classCode;
 		}
-		loadJs("./91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime(), function() {
+		var jsstring = "";
+		if (tempFile !== "ace") {
+			jsstring = "./91/1/" +tempFile + ".js?cachebuster="+ new Date().getTime();
+		} else {
+			jsstring = "./90/1/9001_006_ace.js";
+		}
+		loadJs(jsstring, function() {
 			//※ 대사집 불러오기 전까진 다른 작업 수행 금지
 
 
@@ -1236,8 +1250,14 @@ window.onload = function() { //이미지 선로딩 외엔 모두 getPage에서 �
 			for (i=0;i<text.length;i++) {
 				if (typeof text[i][1] != 'undefined') {
 					if (text[i][1] != "") {
-						if (imageList.indexOf(images + "back/" + text[i][1] + ".jpg") == -1) {
-							imageList.push(images + "back/" + text[i][1] + ".jpg");
+						if (tempFile !== "ace") {
+							if (imageList.indexOf(images + "back/" + text[i][1] + ".jpg") == -1) {
+								imageList.push(images + "back/" + text[i][1] + ".jpg");
+							}
+						} else {
+							if (imageList.indexOf(images + "90/" + text[i][1] + ".jpg") == -1) {
+								imageList.push(images + "90/" + text[i][1] + ".jpg");
+							}
 						}
 					}
 				}
